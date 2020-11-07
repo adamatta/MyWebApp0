@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title> profile</title>
+    <style media="screen">
+    .myDiv {
+  border: 5px outset orange;
+  background-color: black;
+  color: white;
+  text-align: justify;
+  font-family: Arial, Helvetica, sans-serif;
+
+  }
+
+  .div2 label {
+    position: relative;
+    left: 30px;
+    }
+  }
+
+
+  h1 {
+  text-shadow: 2px 2px 5px orange;
+  }
+  table {
+  border: orange;
+  width: 50%;
+  position: relative;
+  left: 60px;
+  }
+
+  p,h1,h2,input {
+    position: relative;
+    left: 30px;
+  }
+
+
+  th {
+  height: 10px;
+  }
+  th, td {
+  padding: 15px;
+  text-align: left;
+  }
+
+  ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid orange;
+  background-color: black;
+}
+
+li {
+  float: left;
+}
+
+li:last-child {
+  border-right: none;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+li a:hover:not(.active) {
+  color: white;
+  background-color: orange;
+}
+
+li a.active {
+  color: white;
+  background-color: orange;
+}
+.tweek{
+  position: relative;
+  left: 300;
+}
+    </style>
+
+    <script type="text/javascript">
+
+    function validateForm() {
+      var things = ['fname','uname','lname','password'];
+      for (i in things){
+        var x = document.forms["myForm"][things[i]].value;
+        if (x == ""){
+          alert("Please fill all entries:");
+          return false;
+        }}
+
+
+
+}
+    </script>
+  </head>
+  <body>
+    <div class="">
+    <ul>
+      <li><a href = 'http://18.205.157.167/'>Home</a></li>
+      <li><a href="http://18.205.157.167/all/">Database</a></li>
+      <li><a href="http://18.205.157.167/about/">About</a></li>
+    </ul>
+    </div>
+    <div class='myDiv' >
+
+      <p><img src="/static/userpics/banner.png" width='400' alt="logo image available"/></p>
+      <p><h1 style="font-size:2vw">Sign up!</h1></p>
+
+      <form name="myForm" action =  "http://18.205.157.167/login" onsubmit="return validateForm()" method = "post" enctype="multipart/form-data">
+        <p><label for="uname">User name:</label></p>
+        <input type='text' id='uname' name='uname' value=''>
+        <p><label for="password">Password:</label></p>
+        <input type='text' id='password' name='password' value=''>
+        <p><label for="fname">First name:</label></p>
+        <input type='text' id='fname' name='fname' value=''>
+        <p><label for="lname">Last name:</label></p>
+        <input type='text' id='lname' name='lname' value=''><br><br>
+        <div class='div2' >
+        <input type="radio" id="male" name="gender" value="male">
+        <label class = "tweek" for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label>
+        <input type="radio" id="other" name="gender" value="other">
+        <label for="other">Other</label>
+      </div>
+        <p><label class="custom-file-label" for="image">Upload Profile Picture:</label></p>
+        <input class="custom-file-label" type="file" id="image" name="image">
+
+          <br><br>
+          <input type='submit' value='Submit'>
+
+      </form>
+      <p>If you press submit you will be redirected to a confirmation page</p>
+
+
+  </div>
+  </body>
+</html>

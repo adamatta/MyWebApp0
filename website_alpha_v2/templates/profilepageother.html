@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title> profile</title>
+    <style media="screen">
+    .myDiv {
+  border: 5px outset orange;
+  background-color: black;
+  color: white;
+  text-align: justify;
+  font-family: Arial, Helvetica, sans-serif;
+  }
+
+  h1 {
+  text-shadow: 2px 2px 5px orange;
+  }
+  table {
+  border: orange;
+  width: 50%;
+  position: relative;
+  left: 60px;
+  }
+
+
+  p,h1,h2 {
+    position: relative;
+    left: 30px;
+  }
+  th {
+  height: 10px;
+  }
+  th, td {
+  padding: 15px;
+  text-align: left;
+  }
+
+  ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid orange;
+  background-color: black;
+}
+
+li {
+  float: left;
+}
+
+li:last-child {
+  border-right: none;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+li a:hover:not(.active) {
+  color: white;
+  background-color: orange;
+}
+
+li a.active {
+  color: white;
+  background-color: orange;
+}
+    </style>
+  </head>
+  <body>
+    <div class="">
+    <ul>
+      <li><a href="http://18.205.157.167/">Home</a></li>
+      <li><a href="http://18.205.157.167/profile/">Profile</a></li>
+      <li><a href="http://18.205.157.167/all/">Database</a></li>
+      <li><a href="http://18.205.157.167/about/">About</a></li>
+      <li style="float:right"><a href="http://18.205.157.167/sign-out/">Sign out</a></li>
+    </ul>
+    </div>
+    <div class='myDiv' >
+      <body>
+        <p><img src="/static/userpics/banner.png" width='400' alt="logo image available"/></p>
+        <p><h1 style="font-size:2vw">{{uname}} Profile!</h1></p>
+        <table>
+          <tr>
+            <td>
+              <img src="/static/userpics/{{pic}}" width="300" alt="no image available"/>
+            </td>
+            <td>
+              <table border = 1>
+                <tr>
+                   <th> User </th>
+                   <td> {{ data['User Name'] }} </td>
+                </tr>
+                <tr>
+                   <th> Forename </th>
+                   <td> {{ data['First Name'] }} </td>
+                </tr>
+                <tr>
+                   <th> Surname </th>
+                   <td> {{ data['Last Name'] }} </td>
+                </tr>
+                <tr>
+                   <th> Gender </th>
+                   <td> {{ data['Gender'] }} </td>
+                </tr>
+           </table>
+            </td>
+          </tr>
+        </table>
+
+
+  </div>
+  </body>
+</html>
